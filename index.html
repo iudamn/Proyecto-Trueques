@@ -1,11 +1,182 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Página en GitHub Pages</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Proyecto: Plataforma de Trueque</title>
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent1:#6ee7b7;
+      --accent2:#60a5fa;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+      --maxw: 980px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg,#071029 0%, #071a2e 50%, #081424 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      padding:40px 20px;
+      display:flex;
+      justify-content:center;
+      font-size:16px;
+    }
+    .wrap{max-width:var(--maxw);width:100%}
+    header{
+      background: linear-gradient(90deg,var(--accent1) 0%, var(--accent2) 100%);
+      color:#06202b;
+      padding:26px;
+      border-radius:calc(var(--radius) + 2px);
+      box-shadow: 0 8px 30px rgba(8,18,28,0.6);
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:24px;
+    }
+    .logo{
+      width:68px;height:68px;border-radius:12px;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;font-weight:700;color:#08323a;font-size:22px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+    header h1{margin:0;font-size:20px}
+    header p{margin:4px 0 0;color:rgba(6,32,43,0.85)}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:20px}
+    main{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:22px;border-radius:var(--radius);box-shadow: 0 10px 30px rgba(3,8,15,0.6);
+    }
+    aside{
+      background:var(--card);
+      padding:20px;border-radius:12px;min-height:200px;box-shadow: 0 8px 24px rgba(2,6,12,0.6);
+    }
+    h2{margin-top:0}
+    .muted{color:var(--muted);font-size:14px}
+    section{margin-bottom:18px}
+    .card{background:var(--glass);padding:14px;border-radius:12px;margin-top:12px}
+
+    ul{padding-left:18px}
+    .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px}
+    .benefit{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+
+    footer{margin-top:18px;color:var(--muted);font-size:14px}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr}
+      aside{order:2}
+    }
+
+    .cta{display:inline-block;margin-top:8px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent2),var(--accent1));color:#05202b;font-weight:600;text-decoration:none}
+
+    .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+  </style>
 </head>
 <body>
-  <h1>¡Hola, mundo! 🚀</h1>
-  <p>Esta es mi primera página con GitHub Pages.</p>
+  <div class="wrap">
+    <header>
+      <div class="logo">TQ</div>
+      <div>
+        <h1>Plataforma de Trueque — Proyecto</h1>
+        <p class="muted">Definición del problema, análisis organizacional, objetivos y beneficios</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section>
+          <h2>Definición del problema</h2>
+          <div class="card">
+            <p>Actualmente no existe una plataforma digital enfocada de forma integral en el <strong>trueque</strong>. La mayoría de los portales se orientan al comercio tradicional donde el dinero es el medio de transacción, lo que deja fuera la posibilidad de intercambios directos entre personas.</p>
+            <p>Esta carencia resulta especialmente crítica en contextos donde el dinero pierde su valor o no está disponible. Durante la pandemia, por ejemplo, muchas personas de escasos recursos y clase media recurrieron al intercambio de alimentos y objetos del hogar; sin embargo, estos intercambios se realizaron de forma desorganizada, mayormente a través de redes sociales, con poca seguridad y alcance limitado.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Análisis del contexto organizacional</h2>
+          <div class="card">
+            <ol>
+              <li><strong>Crisis económicas y sociales:</strong> La inflación y la desigualdad fomentan alternativas al sistema monetario tradicional.</li>
+              <li><strong>Transformación digital:</strong> Los usuarios están familiarizados con plataformas online, lo que facilita la adopción de nuevas herramientas.</li>
+              <li><strong>Economía colaborativa:</strong> Existe una tendencia creciente hacia la reutilización de bienes y la economía circular.</li>
+              <li><strong>Falta de confianza en canales informales:</strong> Los grupos de intercambio en redes sociales suelen carecer de mecanismos de validación y protección.</li>
+            </ol>
+          </div>
+        </section>
+
+        <section>
+          <h2>Objetivo del proyecto</h2>
+          <div class="card">
+            <p><strong>Desarrollar una plataforma digital que facilite el intercambio de bienes y servicios mediante trueques, ofreciendo un entorno seguro, organizado y accesible para los usuarios.</strong></p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Beneficios esperados</h2>
+          <div class="benefits">
+            <div class="benefit">
+              <strong>Accesibilidad económica</strong>
+              <p class="muted">Permitir el acceso a bienes y servicios sin necesidad de dinero.</p>
+            </div>
+            <div class="benefit">
+              <strong>Organización y eficiencia</strong>
+              <p class="muted">Centralizar intercambios y reducir la informalidad.</p>
+            </div>
+            <div class="benefit">
+              <strong>Seguridad y confianza</strong>
+              <p class="muted">Perfiles verificados, reputación y mecanismos de validación.</p>
+            </div>
+            <div class="benefit">
+              <strong>Sostenibilidad</strong>
+              <p class="muted">Fomentar la reutilización y la economía circular.</p>
+            </div>
+            <div class="benefit">
+              <strong>Resiliencia social</strong>
+              <p class="muted">Alternativa válida en crisis económicas o desastres.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Primeros pasos recomendados</h2>
+          <div class="card">
+            <ul>
+              <li>Validar la idea con una comunidad piloto y recoger requisitos.</li>
+              <li>Definir un MVP centrado en perfiles, publicaciones de intercambio y sistema de reputación.</li>
+              <li>Implementar medidas básicas de seguridad (verificación por email/teléfono y moderación).</li>
+            </ul>
+          </div>
+        </section>
+
+        <footer>
+          <div class="meta">
+            <div>Autor: Equipo de proyecto</div>
+            <div>Estado: Borrador</div>
+            <div>Fecha: <!-- fecha dinámica opcional --> Agosto 2025</div>
+          </div>
+        </footer>
+      </main>
+
+      <aside>
+        <h3 style="margin-top:0">Resumen rápido</h3>
+        <p class="muted">Una plataforma de trueque para facilitar intercambios seguros y organizados entre usuarios, especialmente útil en contextos de crisis económica o cuando el acceso al dinero es limitado.</p>
+
+        <div style="margin-top:12px">
+          <a class="cta" href="#">Copiar contenido</a>
+        </div>
+
+        <div style="margin-top:16px" class="card">
+          <h4 style="margin:0 0 8px 0">¿Cómo usar esto?</h4>
+          <p class="muted" style="margin:0">Copia este archivo en <code>index.html</code> dentro del repositorio de tu GitHub Pages y haz push. En segundos verás la página publicada.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
 </body>
 </html>
