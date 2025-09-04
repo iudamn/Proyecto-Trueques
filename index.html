@@ -42,7 +42,9 @@
       margin-bottom:24px;
     }
     .logo{
-      width:68px;height:68px;border-radius:12px;background:rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;font-weight:700;color:#08323a;font-size:22px;
+      width:68px;height:68px;border-radius:12px;background:rgba(255,255,255,0.9);
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:#08323a;font-size:22px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
     header h1{margin:0;font-size:20px}
@@ -50,11 +52,13 @@
     .grid{display:grid;grid-template-columns:1fr 340px;gap:20px}
     main{
       background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      padding:22px;border-radius:var(--radius);box-shadow: 0 10px 30px rgba(3,8,15,0.6);
+      padding:22px;border-radius:var(--radius);
+      box-shadow: 0 10px 30px rgba(3,8,15,0.6);
     }
     aside{
       background:var(--card);
-      padding:20px;border-radius:12px;min-height:200px;box-shadow: 0 8px 24px rgba(2,6,12,0.6);
+      padding:20px;border-radius:12px;min-height:200px;
+      box-shadow: 0 8px 24px rgba(2,6,12,0.6);
     }
     h2{margin-top:0}
     .muted{color:var(--muted);font-size:14px}
@@ -63,7 +67,8 @@
 
     ul{padding-left:18px}
     .benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px}
-    .benefit{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .benefit{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
 
     footer{margin-top:18px;color:var(--muted);font-size:14px}
 
@@ -73,6 +78,10 @@
     }
 
     .meta{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+    table{width:100%;border-collapse:collapse;font-size:15px}
+    th,td{padding:8px;text-align:left}
+    th{background:rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.1)}
+    td{border-bottom:1px solid rgba(255,255,255,0.08)}
   </style>
 </head>
 <body>
@@ -86,6 +95,7 @@
 
     <div class="grid">
       <main>
+        <!-- Definición del problema -->
         <section>
           <h2>Definición del problema</h2>
           <div class="card">
@@ -94,18 +104,70 @@
           </div>
         </section>
 
+        <!-- PESTEL -->
         <section>
-          <h2>Análisis del contexto organizacional</h2>
+          <h2>Análisis del contexto organizacional – PESTEL</h2>
           <div class="card">
-            <ol>
-              <li><strong>Crisis económicas y sociales:</strong> La inflación y la desigualdad fomentan alternativas al sistema monetario tradicional.</li>
-              <li><strong>Transformación digital:</strong> Los usuarios están familiarizados con plataformas online, lo que facilita la adopción de nuevas herramientas.</li>
-              <li><strong>Economía colaborativa:</strong> Existe una tendencia creciente hacia la reutilización de bienes y la economía circular.</li>
-              <li><strong>Falta de confianza en canales informales:</strong> Los grupos de intercambio en redes sociales suelen carecer de mecanismos de validación y protección.</li>
-            </ol>
+            <table>
+              <thead>
+                <tr>
+                  <th>Factor</th>
+                  <th>Observación</th>
+                  <th>Implicación para el proyecto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Político</td>
+                  <td>Políticas públicas que promueven economía circular y sostenibilidad.</td>
+                  <td>Posible apoyo institucional o financiamiento.</td>
+                </tr>
+                <tr>
+                  <td>Económico</td>
+                  <td>Inflación y desigualdad impulsan alternativas al sistema monetario.</td>
+                  <td>Mayor demanda de plataformas de trueque.</td>
+                </tr>
+                <tr>
+                  <td>Social</td>
+                  <td>Creciente interés en consumo responsable y colaboración comunitaria.</td>
+                  <td>Alta predisposición a adoptar soluciones colaborativas.</td>
+                </tr>
+                <tr>
+                  <td>Tecnológico</td>
+                  <td>Amplia penetración de smartphones y familiaridad con apps.</td>
+                  <td>Facilidad de adopción y escalabilidad.</td>
+                </tr>
+                <tr>
+                  <td>Ecológico</td>
+                  <td>Necesidad de reducir residuos y fomentar reutilización.</td>
+                  <td>Trueque como herramienta de sostenibilidad.</td>
+                </tr>
+                <tr>
+                  <td>Legal</td>
+                  <td>Regulaciones sobre comercio electrónico y protección de datos.</td>
+                  <td>Necesidad de cumplir con leyes de privacidad y seguridad.</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
+        <!-- Stakeholders -->
+        <section>
+          <h2>Identificación de Stakeholders</h2>
+          <div class="card">
+            <ul>
+              <li><strong>Usuarios individuales:</strong> Personas de distintos niveles socioeconómicos que buscan intercambiar bienes y servicios sin dinero.</li>
+              <li><strong>Comunidades locales:</strong> Barrios, juntas de vecinos o asociaciones comunitarias que podrían organizar intercambios colectivos.</li>
+              <li><strong>Organizaciones sociales y ONGs:</strong> Entidades que promueven la economía colaborativa, la sostenibilidad o la ayuda en emergencias.</li>
+              <li><strong>Instituciones públicas:</strong> Gobiernos locales o municipales interesados en fomentar prácticas de resiliencia social y economía circular.</li>
+              <li><strong>Emprendedores y pequeños negocios:</strong> Que podrían ofrecer servicios o productos a cambio de otros, reduciendo costos en épocas de crisis.</li>
+              <li><strong>Administradores de la plataforma:</strong> Encargados de la gestión, validación, seguridad y moderación del sistema.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Objetivo -->
         <section>
           <h2>Objetivo del proyecto</h2>
           <div class="card">
@@ -113,6 +175,7 @@
           </div>
         </section>
 
+        <!-- Beneficios -->
         <section>
           <h2>Beneficios esperados</h2>
           <div class="benefits">
@@ -139,6 +202,7 @@
           </div>
         </section>
 
+        <!-- Primeros pasos -->
         <section>
           <h2>Primeros pasos</h2>
           <div class="card">
@@ -150,6 +214,7 @@
           </div>
         </section>
 
+        <!-- Footer -->
         <footer>
           <div class="meta">
             <div>Autores: Mario Laurie, Danko Torres, Camila Cartes</div>
