@@ -126,10 +126,24 @@ header{
     box-shadow: 0 8px 26px rgba(0,0,0,0.55);
     }
 
-    figure{
-    margin:0;
-    text-align:center; /* centra la imagen y el texto */
-    }
+    figure {
+  display: inline-block; /* permite centrar y mantener tamaño original */
+  margin: 20px;
+  text-align: center; /* centra el figcaption */
+}
+
+figure img {
+  max-width: 100%; /* que no supere el contenedor */
+  height: auto;    /* mantiene proporción */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+figure figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 6px;
+}
   </style>
 </head>
 <body>
