@@ -459,6 +459,121 @@ figure figcaption {
   </div>
 </section>
 
+<section>
+
+  <h2>Diagrama de Entidad-Relación</h2>
+
+  <table>
+  <thead>
+    <tr>
+      <th>Entidad</th>
+      <th>Atributos</th>
+      <th>Clave Primaria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USUARIO</td>
+      <td>idUsuario, nombre, correo, contraseña, ubicación, reputación</td>
+      <td>idUsuario</td>
+    </tr>
+    <tr>
+      <td>OFERTA</td>
+      <td>idOferta, idUsuario (FK), título, descripción, categoría, estado, fechaPublicación</td>
+      <td>idOferta</td>
+    </tr>
+    <tr>
+      <td>TRUEQUE</td>
+      <td>idTrueque, idOferta1 (FK), idOferta2 (FK), estado, fechaInicio, fechaCierre</td>
+      <td>idTrueque</td>
+    </tr>
+    <tr>
+      <td>CHAT</td>
+      <td>idChat, idTrueque (FK), idUsuarioEmisor (FK), idUsuarioReceptor (FK), mensaje, fechaEnvio</td>
+      <td>idChat</td>
+    </tr>
+    <tr>
+      <td>FAVORITO</td>
+      <td>idFavorito, idUsuario (FK), idOferta (FK)</td>
+      <td>idFavorito</td>
+    </tr>
+    <tr>
+      <td>NOTIFICACION</td>
+      <td>idNotificacion, idUsuario (FK), mensaje, tipo, fecha, leida</td>
+      <td>idNotificacion</td>
+    </tr>
+    <tr>
+      <td>REPORTE</td>
+      <td>idReporte, idUsuarioReporta (FK), idUsuarioReportado (FK), idOferta (FK), motivo, fecha</td>
+      <td>idReporte</td>
+    </tr>
+    <tr>
+      <td>CALIFICACION</td>
+      <td>idCalificacion, idTrueque (FK), idUsuarioEvaluador (FK), idUsuarioEvaluado (FK), puntuacion, comentario</td>
+      <td>idCalificacion</td>
+    </tr>
+  </tbody>
+</table>
+
+  <table>
+    <caption style="caption-side: top; text-align:center; font-weight:bold; margin-bottom:8px;">
+    Tabla 2: Relaciones y Cardinalidades
+  </caption>
+  <thead>
+    <tr>
+      <th>Relación</th>
+      <th>Cardinalidad</th>
+      <th>Explicación funcional</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>USUARIO – OFERTA (“publica”)</td>
+      <td>1 a N (Un usuario puede publicar muchas ofertas, pero una oferta pertenece a un solo usuario)</td>
+      <td>Representa que cada usuario puede crear varias publicaciones de trueque, cada una con su título, descripción y categoría.</td>
+    </tr>
+    <tr>
+      <td>USUARIO – FAVORITO (“marca”)</td>
+      <td>1 a N (Un usuario puede marcar muchas ofertas como favoritas)</td>
+      <td>Permite al usuario guardar ofertas de interés para revisarlas más tarde, sin necesidad de realizar un trueque inmediatamente.</td>
+    </tr>
+    <tr>
+      <td>USUARIO – NOTIFICACION (“recibe”)</td>
+      <td>1 a N (Un usuario puede recibir muchas notificaciones)</td>
+      <td>Indica que el sistema envía notificaciones a los usuarios por eventos como nuevas ofertas, mensajes o actualizaciones de estado.</td>
+    </tr>
+    <tr>
+      <td>USUARIO – REPORTE (“realiza”)</td>
+      <td>1 a N (Un usuario puede realizar varios reportes)</td>
+      <td>Permite que los usuarios informen comportamientos inapropiados o problemas con otras ofertas o usuarios.</td>
+    </tr>
+    <tr>
+      <td>USUARIO – CALIFICACION (“evalúa”)</td>
+      <td>1 a N (Un usuario puede emitir varias calificaciones hacia otros usuarios)</td>
+      <td>Registra las evaluaciones que un usuario realiza después de completar un trueque, ayudando a generar reputación.</td>
+    </tr>
+    <tr>
+      <td>OFERTA – TRUEQUE (“participa en”)</td>
+      <td>1 a N (Una oferta puede participar en varios trueques, pero cada trueque involucra dos ofertas específicas)</td>
+      <td>Representa el vínculo entre las ofertas que se intercambian entre usuarios dentro de un trueque.</td>
+    </tr>
+    <tr>
+      <td>TRUEQUE – CHAT (“genera”)</td>
+      <td>1 a N (Un trueque puede tener múltiples mensajes asociados)</td>
+      <td>Permite la comunicación entre los usuarios que participan en un mismo trueque, facilitando la negociación de condiciones.</td>
+    </tr>
+    <tr>
+      <td>TRUEQUE – CALIFICACION (“produce”)</td>
+      <td>1 a N (Cada trueque genera una o más calificaciones)</td>
+      <td>Después de finalizar un trueque, los usuarios pueden calificarse mutuamente en base a la experiencia del intercambio.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  
+</section>
+
 
         <!-- Casos de Uso -->
 <section>
